@@ -1,0 +1,53 @@
+------------------------------------------------------------------------
+r191 | adjo | 2010-08-06 15:13:34 +0000 (Fri, 06 Aug 2010) | 3 lines
+Changed paths:
+   M /trunk/Genie.lua
+   M /trunk/Locale
+   M /trunk/Locale/deDE.lua
+   M /trunk/Locale/enUS.lua
+   M /trunk/Locale/esES.lua
+   M /trunk/Locale/esMX.lua
+   M /trunk/Locale/frFR.lua
+   M /trunk/Locale/koKR.lua
+   M /trunk/Locale/ruRU.lua
+   M /trunk/Locale/zhCN.lua
+   M /trunk/Locale/zhTW.lua
+
+UPDATE; aic localization
+UPDATE; Item.Id -> ItemID
+ADDED; L.UseProfile, L.Sync, L.ItemID
+------------------------------------------------------------------------
+r190 | adjo | 2010-07-16 15:14:52 +0000 (Fri, 16 Jul 2010) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+BUGFIX; AceSerializer-3.0
+------------------------------------------------------------------------
+r189 | adjo | 2010-07-16 15:06:05 +0000 (Fri, 16 Jul 2010) | 2 lines
+Changed paths:
+   M /trunk/.pkgmeta
+   M /trunk/embeds.xml
+
+ADDESNEW; AceSerializer-3.0 added
+
+------------------------------------------------------------------------
+r188 | adjo | 2010-07-16 14:47:59 +0000 (Fri, 16 Jul 2010) | 1 line
+Changed paths:
+   M /trunk/Genie.lua
+
+BUGFIX; Ticket 55
+------------------------------------------------------------------------
+r187 | adjo | 2010-07-16 14:45:43 +0000 (Fri, 16 Jul 2010) | 1 line
+Changed paths:
+   M /trunk
+   M /trunk/.pkgmeta
+   M /trunk/embeds.xml
+
+NEW; AceComm-3.0 added
+------------------------------------------------------------------------
+r186 | adjo | 2010-07-03 14:30:04 +0000 (Sat, 03 Jul 2010) | 1 line
+Changed paths:
+   M /trunk/Genie.lua
+
+UPDATE; Genie.GUI.Guildbank
+------------------------------------------------------------------------

@@ -1,0 +1,25 @@
+﻿## Title: Genie |cff7fff7f -Ace3-|r
+## Notes: Genie helps you organize your bags, bank and/or guildbank
+## Title-deDE: Genie |cff7fff7f -Ace3-|r
+## Notes-deDE: Genie hilft dir deine Taschen, Bank und/oder Gildenbank ordentlich zu halten
+## X-Curse-Packaged-Version: r191
+## X-Curse-Project-Name: Genie
+## X-Curse-Project-ID: genie
+## X-Curse-Repository-ID: wow/genie/mainline
+
+## Interface: 30300
+## Version: r191
+## X-Date: 2010-08-06T15:13:34Z
+## X-Revision: 191
+
+## Author: Adjo
+## X-Website: http://wow.curseforge.com/projects/genie
+## X-Feedback: http://wow.curseforge.com/projects/genie/tickets/
+
+## SavedVariables: GenieDB
+
+#@no-lib-strip@
+embeds.xml
+#@end-no-lib-strip@
+locale.xml
+Genie.lua
