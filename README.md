@@ -38,5 +38,5 @@ Repo fuer angepasste WoW-Addons mit klaren Download-Pfaden, Source-Code und eine
 
 ## Quelle und Wartung
 
-Wenn du ein Addon anpasst, aendere zuerst den Inhalt unter `source/` und erzeuge danach die ZIP-Downloads neu mit `scripts/build_source_archives.py`.
+Wenn du ein Addon anpasst, ändere zuerst den Inhalt unter `source/` und erzeuge danach die ZIP-Downloads neu mit `scripts/build_source_archives.py`.
 
