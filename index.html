@@ -10,8 +10,8 @@
       --bg: #0b0f14;
       --bg-soft: #111822;
       --panel: #16202c;
-      --panel-2: #1d2835;
       --line: rgba(255, 255, 255, 0.09);
+      --line-strong: rgba(255, 255, 255, 0.16);
       --text: #eef4fb;
       --muted: #a8b6c7;
       --teal: #58c7d9;
@@ -26,7 +26,7 @@
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: "Segoe UI", Inter, system-ui, sans-serif;
       color: var(--text);
       background:
         radial-gradient(circle at top left, rgba(88, 199, 217, 0.16), transparent 30%),
@@ -40,11 +40,10 @@
       display: flex; justify-content: space-between; align-items: center; gap: 16px;
       padding: 8px 0 24px;
     }
-    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: 0; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; }
     .mark {
       width: 42px; height: 42px; border-radius: 12px;
-      background:
-        linear-gradient(135deg, rgba(88, 199, 217, 0.95), rgba(239, 180, 90, 0.95));
+      background: linear-gradient(135deg, rgba(88, 199, 217, 0.95), rgba(239, 180, 90, 0.95));
       box-shadow: 0 10px 24px rgba(88, 199, 217, 0.2);
     }
     .nav { display: flex; gap: 16px; flex-wrap: wrap; color: var(--muted); font-size: 0.95rem; }
@@ -57,9 +56,6 @@
       align-items: center;
       padding: 18px 0 34px;
     }
-    .hero-copy {
-      padding: 18px 0;
-    }
     .eyebrow {
       display: inline-flex; gap: 10px; align-items: center;
       padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px;
@@ -70,7 +66,6 @@
       margin: 18px 0 14px;
       font-size: clamp(2.4rem, 5vw, 4.8rem);
       line-height: 0.98;
-      letter-spacing: 0;
     }
     .lede {
       margin: 0;
@@ -89,9 +84,11 @@
       border: 1px solid var(--line); background: rgba(255,255,255,0.03);
       box-shadow: var(--shadow); font-weight: 600;
     }
-    .btn.primary { background: linear-gradient(135deg, rgba(88, 199, 217, 0.95), rgba(118, 211, 155, 0.95)); color: #0b0f14; border-color: transparent; }
-    .btn.secondary { color: var(--text); }
-    .btn:hover { transform: translateY(-1px); }
+    .btn.primary {
+      background: linear-gradient(135deg, rgba(88, 199, 217, 0.95), rgba(118, 211, 155, 0.95));
+      color: #0b0f14;
+      border-color: transparent;
+    }
 
     .hero-visual {
       position: relative;
@@ -122,20 +119,14 @@
     .floating strong { font-size: 1rem; }
     .floating span { color: var(--muted); font-size: 0.92rem; line-height: 1.45; }
 
-    .section {
-      padding: 18px 0 44px;
-    }
+    .section { padding: 18px 0 44px; }
     .section-head {
       display: flex; justify-content: space-between; align-items: end; gap: 18px;
       margin-bottom: 18px;
     }
-    h2 {
-      margin: 0;
-      font-size: 1.6rem;
-      letter-spacing: 0;
-    }
+    h2 { margin: 0; font-size: 1.6rem; }
     .section-head p {
-      margin: 0; color: var(--muted); max-width: 54ch; line-height: 1.55;
+      margin: 0; color: var(--muted); max-width: 60ch; line-height: 1.55;
     }
 
     .grid {
@@ -163,10 +154,9 @@
     }
     .card-links {
       margin-top: auto;
-      display: flex; flex-wrap: wrap; gap: 10px;
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px;
     }
     .card-links a {
-      flex: 1 1 120px;
       min-height: 42px;
       border-radius: 12px;
       display: inline-flex;
@@ -176,10 +166,14 @@
       background: rgba(255,255,255,0.04);
       border: 1px solid var(--line);
       font-weight: 600;
+      text-align: center;
     }
     .card-links a.primary {
       background: rgba(88, 199, 217, 0.14);
       border-color: rgba(88, 199, 217, 0.32);
+    }
+    .card-links a.tertiary {
+      border-color: var(--line-strong);
     }
 
     .steps {
@@ -208,6 +202,7 @@
     @media (max-width: 980px) {
       .hero { grid-template-columns: 1fr; }
       .grid, .steps { grid-template-columns: 1fr; }
+      .card-links { grid-template-columns: 1fr; }
       .section-head { flex-direction: column; align-items: start; }
       .topbar { flex-direction: column; align-items: start; }
     }
@@ -220,38 +215,36 @@
         <div class="mark" aria-hidden="true"></div>
         <div>
           <div>WoW Addon Hub</div>
-          <div style="color: var(--muted); font-size: 0.9rem;">Source, ZIPs und klare Downloads</div>
+          <div style="color: var(--muted); font-size: 0.9rem;">ZIP-Downloads, Code und klare Detailseiten</div>
         </div>
       </div>
       <nav class="nav">
         <a href="#downloads">Downloads</a>
-        <a href="#source">Source</a>
-        <a href="./CHANGELOG.md">Changelog</a>
-        <a href="./README.md">README</a>
+        <a href="#addons">Addons</a>
+        <a href="./README.md">Übersicht</a>
       </nav>
     </header>
 
     <section class="hero">
-      <div class="hero-copy">
-        <div class="eyebrow">Fuer Nutzer, die direkt herunterladen wollen</div>
-        <h1>Angepasste WoW Addons, sauber gebuendelt und leicht ladbar.</h1>
+      <div>
+        <div class="eyebrow">Für Nutzer, die direkt herunterladen wollen</div>
+        <h1>Angepasste WoW Addons, sauber gebündelt und leicht ladbar.</h1>
         <p class="lede">
-          Dieses Repository trennt Source-Code, fertige ZIP-Downloads und Changelogs so,
-          dass erfahrene Nutzer die Quellen ansehen koennen und Einsteiger einfach auf die
-          passenden Download-Links klicken.
+          Diese Seite zeigt nur, was Nutzer wirklich brauchen: fertige ZIP-Downloads, den
+          Code zum Nachsehen und eine eigene Detailseite pro Addon mit Änderungen und Hinweisen.
         </p>
         <div class="actions">
           <a class="btn primary" href="#downloads">Zu den Downloads</a>
-          <a class="btn secondary" href="./downloads/zips">Fertige ZIPs</a>
-          <a class="btn secondary" href="./downloads/source-zips">Source-ZIPs</a>
+          <a class="btn" href="./downloads/zips">ZIP-Ordner öffnen</a>
+          <a class="btn" href="./source">Code ansehen</a>
         </div>
       </div>
 
       <div class="hero-visual">
-        <img src="./assets/hero.png" alt="Stimmungsbild fuer die Addon-Downloads">
+        <img src="./assets/hero.png" alt="Stimmungsbild für die Addon-Downloads">
         <div class="floating">
           <strong>Direkt verwendbar</strong>
-          <span>Jedes Paket liegt als normaler Source-Ordner und als ZIP vor. So kann man entweder browse-n oder sofort herunterladen.</span>
+          <span>Jedes Paket bietet einen ZIP-Download für Einsteiger und einen direkten Code-Zugang für Nutzer, die Änderungen nachvollziehen möchten.</span>
         </div>
       </div>
     </section>
@@ -260,33 +253,31 @@
       <div class="section-head">
         <div>
           <h2>Downloads</h2>
-          <p>Die ZIPs sind fuer einfache Nutzung gedacht. Die Source-Ordner sind fuer Kontrolle, Anpassungen und eigene Builds da.</p>
+          <p>Jedes Addon hat genau die nötigen Wege: fertiges ZIP, Code und eine eigene Unterseite mit Changelog und Paketdetails.</p>
         </div>
       </div>
-
       <div class="grid" id="package-grid"></div>
     </section>
 
-    <section class="section" id="source">
+    <section class="section" id="addons">
       <div class="section-head">
         <div>
-          <h2>Source und Wartung</h2>
-          <p>Die Struktur ist auf spätere Erweiterungen ausgelegt. Neue Addons bekommen einfach einen eigenen Ordner und werden im Manifest sowie in der Landing Page ergaenzt.</p>
+          <h2>Einfacher Ablauf</h2>
+          <p>Für normale Nutzer reicht der ZIP-Download. Wer Änderungen prüfen will, geht über die Code-Ansicht oder die jeweilige Addon-Seite.</p>
         </div>
       </div>
-
       <div class="steps">
         <div class="step">
           <div class="n">1</div>
-          <p>Addon waehlen, ZIP herunterladen und in den AddOns-Ordner entpacken.</p>
+          <p>Addon auswählen und das passende ZIP herunterladen.</p>
         </div>
         <div class="step">
           <div class="n">2</div>
-          <p>Wenn du den Code pruefen oder anpassen willst, oeffne den passenden Source-Ordner oder die Source-ZIP.</p>
+          <p>ZIP in den Ordner <code>Interface/AddOns</code> entpacken.</p>
         </div>
         <div class="step">
           <div class="n">3</div>
-          <p>Bei Updates nur den betroffenen Paketordner austauschen. Die Trennung haelt das Repo uebersichtlich.</p>
+          <p>Bei Bedarf die Detailseite öffnen, um Changelog und Code-Links des Addons zu sehen.</p>
         </div>
       </div>
     </section>
@@ -302,25 +293,25 @@
         name: "Auctionator",
         note: "Optimierte Handels- und Scan-Workflows.",
         zip: "./downloads/zips/Auctionator_optimized_2026-05-14.zip",
-        sourceZip: "./downloads/source-zips/Auctionator_source_2026-05-14.zip",
         source: "./source/Auctionator",
-        tags: ["ZIP", "Source", "Einzeladdon"]
+        details: "./addons/auctionator.html",
+        tags: ["ZIP", "Code", "Detailseite"]
       },
       {
         name: "Genie",
         note: "Stabilere Sortierung und robusterer Swap-Pfad.",
         zip: "./downloads/zips/Genie_optimized_2026-05-14.zip",
-        sourceZip: "./downloads/source-zips/Genie_source_2026-05-14.zip",
         source: "./source/Genie",
-        tags: ["ZIP", "Source", "Einzeladdon"]
+        details: "./addons/genie.html",
+        tags: ["ZIP", "Code", "Detailseite"]
       },
       {
         name: "Bagnon Suite",
-        note: "Bagnon plus die zugehoerigen Module in einem Paket.",
+        note: "Bagnon plus die zugehörigen Module in einem Paket.",
         zip: "./downloads/zips/Bagnon_suite_optimized_2026-05-14.zip",
-        sourceZip: "./downloads/source-zips/Bagnon_suite_source_2026-05-14.zip",
         source: "./source/Bagnon",
-        tags: ["ZIP", "Source", "Suite"]
+        details: "./addons/bagnon.html",
+        tags: ["ZIP", "Code", "Detailseite"]
       }
     ];
 
@@ -335,9 +326,9 @@
           ${item.tags.map((tag) => `<span class="pill">${tag}</span>`).join("")}
         </div>
         <div class="card-links">
-          <a class="primary" href="${item.zip}" download>ZIP herunterladen</a>
-          <a href="${item.sourceZip}" download>Source-ZIP</a>
-          <a href="${item.source}">Source-Ordner</a>
+          <a class="primary" href="${item.zip}" download>ZIP</a>
+          <a href="${item.source}">Code</a>
+          <a class="tertiary" href="${item.details}">Details</a>
         </div>
       </article>
     `).join("");

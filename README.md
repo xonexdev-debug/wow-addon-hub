@@ -1,42 +1,35 @@
 # WoW Addon Hub
 
-Repo fuer angepasste WoW-Addons mit klaren Download-Pfaden, Source-Code und einer einfachen Landing Page fuer Einsteiger.
+Angepasste WoW-Addons mit klaren Download-Seiten für Nutzer, die entweder direkt ein ZIP laden oder den Code ansehen möchten.
 
-## Direktlinks
+## Schnellzugriff
 
-- [Landing Page](./index.html)
-- [Changelog](./CHANGELOG.md)
-- [ZIP-Downloads](./downloads/zips)
-- [Source-ZIPs](./downloads/source-zips)
-- [Source-Code](./source)
+- [Startseite](./index.html)
+- [Auctionator](./addons/auctionator.html)
+- [Genie](./addons/genie.html)
+- [Bagnon Suite](./addons/bagnon.html)
 
-## Enthaltene Pakete
+## Downloads
+
+- [Fertige ZIPs](./downloads/zips)
+- [Code](./source)
+
+## Enthaltene Addons
 
 - [Auctionator](./source/Auctionator)
 - [Genie](./source/Genie)
 - [Bagnon Suite](./source/Bagnon)
 
-## Struktur
-
-```text
-.
-├── assets/              # Hero-Grafik und spaetere Web-Assets
-├── downloads/
-│   ├── source-zips/     # Source-Code als direkt ladbare ZIPs
-│   └── zips/            # Angepasste Addon-Archive
-├── source/              # Vollstaendiger Source-Code je Addon
-├── scripts/             # Hilfsskripte zum erneuten Packen
-├── CHANGELOG.md         # Release-Notizen
-└── index.html           # Landing Page fuer Nutzer
-```
-
 ## Installation
 
-1. Lade das passende ZIP aus `downloads/zips` herunter.
-2. Entpacke es in deinen `Interface/AddOns`-Ordner.
-3. Starte das Spiel neu oder lade die Addons im Client neu.
+1. Passendes ZIP herunterladen.
+2. In `Interface/AddOns` entpacken.
+3. Spiel neu starten oder Addons neu laden.
 
-## Quelle und Wartung
+## Changelogs
 
-Wenn du ein Addon anpasst, ändere zuerst den Inhalt unter `source/` und erzeuge danach die ZIP-Downloads neu mit `scripts/build_source_archives.py`.
+Die Änderungen liegen bewusst auf eigenen Addon-Seiten:
 
+- [Auctionator Changelog](./addons/auctionator.html)
+- [Genie Changelog](./addons/genie.html)
+- [Bagnon Suite Changelog](./addons/bagnon.html)
